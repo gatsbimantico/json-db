@@ -4,8 +4,10 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -28,7 +30,10 @@ jobs:
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
+      - name: Version Bump
+        uses: opspresso/action-version@v0.2.5
       - run: npm ci
       - run: npm publish
+        working-directory: ./lib
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
