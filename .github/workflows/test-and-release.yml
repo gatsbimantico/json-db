@@ -24,6 +24,7 @@ jobs:
         
   release:
     name: Release
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - uses: fnkr/github-action-ghr@v1
