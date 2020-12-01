@@ -1,0 +1,18 @@
+{
+  "name": "@json-db/root",
+  "version": "0.1.0",
+  "description": "Tiny JSON-as-DB node module",
+  "main": "lib/dist/index.cjs.js",
+  "module": "lib/dist/index.esm.js",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "test": "lerna run test",
+    "build": "lerna run build"
+  },
+  "author": "gatsbimantico",
+  "license": "MIT",
+  "private": true
+}

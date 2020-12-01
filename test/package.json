@@ -1,0 +1,14 @@
+{
+  "name": "@json-db/test",
+  "version": "0.1.0",
+  "description": "Test/example package",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./index.cjs"
+  },
+  "author": "gatsbimantico",
+  "license": "MIT",
+  "devDependencies": {
+    "json-db": "*"
+  }
+}

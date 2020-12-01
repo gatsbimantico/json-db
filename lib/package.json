@@ -1,0 +1,19 @@
+{
+  "name": "json-db",
+  "version": "0.1.0",
+  "description": "Tiny JSON-as-DB node module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "author": "gatsbimantico",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "cosmiconfig": "^7.0.0",
+    "rollup": "^2.34.0"
+  },
+  "dependencies": {
+    "uuid": "^8.3.1"
+  }
+}
