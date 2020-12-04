@@ -157,7 +157,7 @@ DB.update(
 ).set(
   { surname: 'Jones' }, // partial new value
 ).where(
-  (key, entry) => key == 0 || entry.name == 'David', // condition to select the entries to be updated.
+  (entry, key) => key == 0 || entry.name == 'David', // condition to select the entries to be updated.
 ); // returns an object/array with the updated entries
 DB.update(DB.USER).set({ name: 'John' }); // Without a WHEN clause all the entries will be updated.
 
@@ -165,7 +165,7 @@ DB.update(DB.USER).set({ name: 'John' }); // Without a WHEN clause all the entri
 DB.delete_from(
   DB.USER, // id of the document/collection
 ).where(
-  (key, entry) => key == 0 || entry.name == 'David', // condition to select the entries to be deleted.
+  (entry, key) => key == 0 || entry.name == 'David', // condition to select the entries to be deleted.
 ); // returns true/false if it was deleted
 DB.delete_from(DB.USER); // Without a WHEN clause all the entries will be deleted.
 ```

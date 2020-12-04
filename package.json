@@ -10,7 +10,8 @@
   "scripts": {
     "postinstall": "lerna bootstrap",
     "test": "lerna run test",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "dev:test": "lerna run build && lerna run test"
   },
   "author": "gatsbimantico",
   "license": "MIT",
