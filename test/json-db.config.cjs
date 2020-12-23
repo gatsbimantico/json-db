@@ -4,8 +4,10 @@ const surnames = ['Smith', 'Jones', 'Williams', 'Taylor', 'Davies', 'Brown', 'Wi
 const randItem = (list) => list[Math.floor(Math.random() * list.length)];
 
 module.exports = {
+  data: {
     USER: (new Array(100)).fill(0).map(() => ({
         name: `${randItem(names)} ${randItem(surnames)}`,
         age: Math.floor(Math.random() * 100),
     })),
+  },
 };
